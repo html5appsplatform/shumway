@@ -778,7 +778,7 @@ module Shumway.AVMX.AS {
         var descriptor = Object.getOwnPropertyDescriptor(this.value, nm);
         return !!descriptor && descriptor.enumerable;
       }
-      super.native_propertyIsEnumerable(nm);
+      return super.native_propertyIsEnumerable(nm);
     }
 
     $Bglength: number;
