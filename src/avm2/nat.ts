@@ -1553,7 +1553,7 @@ module Shumway.AVMX.AS {
       if (as3Compatibility) {
         return as3ToLowerCase(String(receiver));
       }
-      String.prototype.toLowerCase.call(receiver);
+      return String.prototype.toLowerCase.call(receiver);
     }
     generic_toUpperCase() {
       var receiver = this == undefined ? '' : this;
