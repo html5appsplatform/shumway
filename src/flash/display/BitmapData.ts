@@ -699,10 +699,10 @@ module Shumway.AVMX.AS.flash.display {
 
     getVector(rect: flash.geom.Rectangle): Uint32Vector {
       var pixelData = this._getPixelData(rect);
-      var outputVector = new this.sec.Uint32Vector(pixelData.length);
       if (!pixelData) {
-        return outputVector;
+        return new this.sec.Uint32Vector(0);
       }
+      var outputVector = new this.sec.Uint32Vector(pixelData.length);
       outputVector.length = pixelData.length;
       outputVector._view().set(pixelData);
       return outputVector;
