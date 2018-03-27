@@ -517,6 +517,7 @@ module Shumway {
       this._plainText = plainText + newText;
       this.textRuns.push(newRun);
       this._writeTextRun(newRun);
+      this.flags |= TextContentFlags.DirtyContent;
     }
 
     prependText(newText: string, format?: flash.text.TextFormat) {
