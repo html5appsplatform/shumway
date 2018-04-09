@@ -352,7 +352,7 @@ module Shumway.GFX.Canvas2D {
             dy = 0;
           }
           for (;i < filters.length - 1; i++) {
-            copyContext.clearRect(0, 0, w, h);
+            copyContext.clearRect(dx, dy, w, h);
             Filters._applyFilter(devicePixelRatio, copyContext, filters[i]);
             copyContext.drawImage(sourceContext.canvas, sx, sy, w, h, dx, dy, w, h);
             Filters._removeFilter(copyContext);
@@ -362,7 +362,7 @@ module Shumway.GFX.Canvas2D {
             copyContext = sourceContext;
             sourceContext = _cc;
             sx = dx;
-            sy = dx;
+            sy = dy;
             dx = _sx;
             dy = _sy;
           }
