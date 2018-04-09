@@ -345,6 +345,8 @@ module Shumway.GFX.Canvas2D {
             _cc = copyContext;
             copyContext = sourceContext;
             sourceContext = _cc;
+            dx = source.region.x;
+            dy = source.region.y;
           } else {
             Canvas2DSurfaceRegion._ensureCopyCanvasSize(w, h);
             copyContext = Canvas2DSurfaceRegion._copyCanvasContext;
