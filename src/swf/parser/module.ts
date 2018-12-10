@@ -488,7 +488,7 @@ module Shumway.SWF.Parser.LowLevel {
     if (flags & TextRecordFlags.HasMoveY) {
       record.moveY = stream.readSi16();
     }
-    if (flags & TextRecordFlags.HasFont) {
+    if (flags & (TextRecordFlags.HasFont | TextRecordFlags.HasFontClass)) {
       record.fontHeight = stream.readUi16();
     }
     var glyphCount = stream.readUi8();
